@@ -1,0 +1,163 @@
+$total-img-size: 500vw;
+$una-img-size: 100vw;
+$time-desplazar:40s;
+$time-fondo:5s;
+.toda-la-ventana-superior {
+    .slider {
+        width: 100vw;
+        margin: 0;
+        ul {
+            // ---------------------------------------
+            display: flex;
+            padding: 0;
+            width: $total-img-size;
+            animation: deslizar $time-desplazar infinite alternate linear;
+            // ---------------------------------------
+            li {
+                width: $una-img-size;
+                list-style: none;
+                .banner-principal {
+                    width: 100vw;
+                    height: 240px;
+                    // ---------------------------------
+                    background-repeat: no-repeat;
+                    background-size: 100vw 240px;
+                    background-size: cover;
+                    animation: fondo $time-fondo infinite alternate;
+                    // ---------------------------------
+                    display: grid;
+                    grid-auto-columns: 1fr 2fr;
+                    grid-template-areas: "img texto";
+                    .img {
+                        grid-area: img;
+                        width: 210px;
+                        height: 210px;
+                        margin: auto;
+                        background-size: cover;
+                        .icono {
+                            display: none;
+                            color: $cl-bg-lite;
+                            font-size: 50px;
+                            transition: all .3s;
+                        }
+                        &:hover .icono {
+                            display: block;
+                        }
+                    }
+                    .texto {
+                        grid-area: texto;
+                        color: $cl-bg-lite;
+                        text-transform: uppercase; // padding: 50px 0;
+                        h1 {
+                            font-family: $lt-gruesa;
+                            // padding-bottom: 5px;
+                            font-size: 40px;
+                        }
+                        h2 {
+                            // font-family: $lt-subtitulos;
+                            font-family: $lt-gruesa;
+                            padding-bottom: 20px;
+                            font-size: 25px;
+                            transition: all .3s;
+                            // padding: 5px 0;
+                        }
+                        a {
+                            background: transparent;
+                            color: $cl-bg-lite;
+                            text-decoration: none;
+                            font-family: $lt-titulo;
+                            font-size: 15px;
+                            border: 3px solid;
+                            padding: 8px 15px;
+                            &:hover {
+                                color: $cl-rojo;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.display-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@keyframes deslizar {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100vw;
+    }
+    50% {
+        margin-left: -100vw;
+    }
+    55% {
+        margin-left: -200vw;
+    }
+    70% {
+        margin-left: -200vw;
+    }
+    75% {
+        margin-left: -300vw;
+    }
+    100% {
+        margin-left: -300vw;
+    }
+    // 20%{margin-left: -100vw0}
+    // 20%{margin-left: -100vw0}
+}
+
+// background: yellow;
+@keyframes fondo {
+    from {
+        background-position: left center;
+        background-size: 1550px;
+    }
+    to {
+        background-position: right center;
+        background-size: 1900px;
+    }
+}
+
+.bp-1 {
+    background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_9e6719a7cdff9c71_releases_ogimage.jpeg);
+    .img {
+        background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_1f536134ce181fee_releases_ogimage.jpeg);
+    }
+}
+
+.bp-2 {
+    background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_a4a9208196df9ade_releases_ogimage.jpeg);
+    .img {
+        background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_0360452e95af0ecc_releases_ogimage.jpeg);
+    }
+}
+
+.bp-3 {
+    background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_06e79c808c162662_releases_ogimage.jpeg);
+    .img {
+        background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_001856746cdfa307_releases_ogimage.jpeg);
+    }
+}
+
+.bp-4 {
+    background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_0ae3ebb9d213f27a_releases_ogimage.jpeg);
+    .img {
+        background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/10/thumb_545fb8a67ea75117_releases_ogimage.jpeg);
+    }
+}
+
+// .bp-5 {
+//     background-image: url();
+//     .img {
+//         background-image: url();
+//     }
+// }

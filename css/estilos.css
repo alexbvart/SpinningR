@@ -319,6 +319,154 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1; } }
 
+.toda-la-ventana-superior .slider {
+  width: 100vw;
+  margin: 0; }
+  .toda-la-ventana-superior .slider ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    width: 500vw;
+    -webkit-animation: deslizar 40s infinite alternate linear;
+    animation: deslizar 40s infinite alternate linear; }
+    .toda-la-ventana-superior .slider ul li {
+      width: 100vw;
+      list-style: none; }
+      .toda-la-ventana-superior .slider ul li .banner-principal {
+        width: 100vw;
+        height: 240px;
+        background-repeat: no-repeat;
+        background-size: 100vw 240px;
+        background-size: cover;
+        -webkit-animation: fondo 5s infinite alternate;
+        animation: fondo 5s infinite alternate;
+        display: -ms-grid;
+        display: grid;
+        grid-auto-columns: 1fr 2fr;
+        grid-template-areas: "img texto"; }
+        .toda-la-ventana-superior .slider ul li .banner-principal .img {
+          grid-area: img;
+          width: 210px;
+          height: 210px;
+          margin: auto;
+          background-size: cover; }
+          .toda-la-ventana-superior .slider ul li .banner-principal .img .icono {
+            display: none;
+            color: #F4F4F4;
+            font-size: 50px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s; }
+          .toda-la-ventana-superior .slider ul li .banner-principal .img:hover .icono {
+            display: block; }
+        .toda-la-ventana-superior .slider ul li .banner-principal .texto {
+          grid-area: texto;
+          color: #F4F4F4;
+          text-transform: uppercase; }
+          .toda-la-ventana-superior .slider ul li .banner-principal .texto h1 {
+            font-family: "Work Sans", sans-serif;
+            font-size: 40px; }
+          .toda-la-ventana-superior .slider ul li .banner-principal .texto h2 {
+            font-family: "Work Sans", sans-serif;
+            padding-bottom: 20px;
+            font-size: 25px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s; }
+          .toda-la-ventana-superior .slider ul li .banner-principal .texto a {
+            background: transparent;
+            color: #F4F4F4;
+            text-decoration: none;
+            font-family: "Barlow", sans-serif;
+            font-size: 15px;
+            border: 3px solid;
+            padding: 8px 15px; }
+            .toda-la-ventana-superior .slider ul li .banner-principal .texto a:hover {
+              color: #EF241C; }
+
+.display-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center; }
+
+@-webkit-keyframes deslizar {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100vw; }
+  50% {
+    margin-left: -100vw; }
+  55% {
+    margin-left: -200vw; }
+  70% {
+    margin-left: -200vw; }
+  75% {
+    margin-left: -300vw; }
+  100% {
+    margin-left: -300vw; } }
+
+@keyframes deslizar {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100vw; }
+  50% {
+    margin-left: -100vw; }
+  55% {
+    margin-left: -200vw; }
+  70% {
+    margin-left: -200vw; }
+  75% {
+    margin-left: -300vw; }
+  100% {
+    margin-left: -300vw; } }
+
+@-webkit-keyframes fondo {
+  from {
+    background-position: left center;
+    background-size: 1550px; }
+  to {
+    background-position: right center;
+    background-size: 1900px; } }
+
+@keyframes fondo {
+  from {
+    background-position: left center;
+    background-size: 1550px; }
+  to {
+    background-position: right center;
+    background-size: 1900px; } }
+
+.bp-1 {
+  background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_9e6719a7cdff9c71_releases_ogimage.jpeg); }
+  .bp-1 .img {
+    background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_1f536134ce181fee_releases_ogimage.jpeg); }
+
+.bp-2 {
+  background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_a4a9208196df9ade_releases_ogimage.jpeg); }
+  .bp-2 .img {
+    background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_0360452e95af0ecc_releases_ogimage.jpeg); }
+
+.bp-3 {
+  background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_06e79c808c162662_releases_ogimage.jpeg); }
+  .bp-3 .img {
+    background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_001856746cdfa307_releases_ogimage.jpeg); }
+
+.bp-4 {
+  background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_0ae3ebb9d213f27a_releases_ogimage.jpeg); }
+  .bp-4 .img {
+    background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/10/thumb_545fb8a67ea75117_releases_ogimage.jpeg); }
+
 .todo-el-body {
   width: 100%; }
   .todo-el-body .toda-la-ventana-superior {
