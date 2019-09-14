@@ -1,0 +1,87 @@
+@import "fuentes&color";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.display-center {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+.margen {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.img-circular {
+    $tamaño-img: 24px;
+    width: $tamaño-img;
+    height: $tamaño-img;
+    border-radius: $tamaño-img/2;
+}
+
+.img-cuadro-255 {
+    $tamaño-img: 255px;
+    width: $tamaño-img;
+    height: $tamaño-img;
+}
+
+.lt-titulo {
+    font-family: $lt-titulo;
+    font-size: 17px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.lt-parrafo {
+    font-family: $lt-parrafo;
+    font-size: 17px;
+    font-weight: unset;
+    text-decoration: none;
+}
+
+.tex-deco-none {
+    text-decoration: none;
+}
+
+.bg-dark {
+    background: $cl-bg-header;
+    color: $cl-bg-lite;
+    text-decoration: none;
+}
+
+.si-20 {
+    font-size: $si-20;
+}
+
+.si-18 {
+    font-size: $si-18;
+}
+
+.si-17 {
+    font-size: $si-17;
+}
+
+.si-15 {
+    font-size: $si-15;
+}
+
+.si-11 {
+    font-size: 12px;
+}
+
+.bt-red-normal {
+    background: $cl-rojo;
+    line-height: 4.2;
+    padding: 0 5px;
+    // width: 100%;
+}
+
+.center-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

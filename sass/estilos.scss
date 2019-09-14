@@ -1,0 +1,39 @@
+@import "recursos/importes";
+@import "recursos/fuentes&color";
+@import "recursos/generales";
+$cl-letra:$cl-blanco;
+// -----------------------------------
+// ---------PARTES DEL CODIGO---------
+@import "partes/header";
+@import "partes/banner";
+@import "partes/gallery";
+// -----------------------------------
+// -------------------MIXIN-------------
+// -------------------MIXIN-------------
+// -----------------------------------
+.todo-el-body {
+    width: 100%;
+    // margin: 0;
+    // padding: 0;
+    // display: grid;
+    // grid-template-rows: 1fr 1fr;
+    // grid-template-areas: "superior", "inferior";
+    .toda-la-ventana-superior {
+        margin: 0;
+        display: 0;
+        // grid-area: "superior";
+        // display: grid;
+        // grid-template-columns: 1fr 1fr 1fr;
+        // grid-template-rows: 1fr;
+        // grid-template-areas: "header-sup", "banner";
+    }
+    .toda-la-ventana-inferior {
+        // grid-area: inferior;
+        width: 100%;
+        max-width: 800px;
+        margin: 22px 33px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "s-lar s-lar tarj tarj";
+    }
+}
