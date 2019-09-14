@@ -230,7 +230,7 @@
   justify-content: center; }
 
 .toda-la-ventana-superior .header {
-  width: 100%;
+  width: 100vw;
   height: 50px;
   grid-area: header-sup;
   background: #1c1f21;
@@ -254,8 +254,6 @@
     -ms-grid-column: 5;
     -ms-grid-column-span: 7;
     grid-area: menu;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (auto)[8];
     grid-template-columns: repeat(8, auto);
     grid-gap: 10px; }
@@ -286,38 +284,39 @@
     -ms-grid-column: 5;
     -ms-grid-column-span: 7;
     grid-area: menu;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (auto)[7];
     grid-template-columns: repeat(7, auto);
     grid-gap: 10px;
     grid-area: acciones; }
 
-@media (max-width: 970px) {
+@media (max-width: 1600px) and (min-width: 1004px) {
+  body {
+    background: green; }
+  .header .menu {
+    display: -ms-grid;
+    display: grid; }
+  .header .acciones {
+    display: -ms-grid;
+    display: grid; } }
+
+@media (max-width: 1003px) and (min-width: 700px) {
   body {
     background: red; }
-  .header {
-    grid-template-areas: "derecha derecha derecha derecha derecha   acciones acciones acciones"; }
-    .header .menu {
-      display: none; }
-  .header > .derecha {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5; } }
+  .header .menu {
+    display: none; }
+  .header .acciones {
+    display: -ms-grid;
+    display: grid; }
+    .header .acciones .borrar {
+      display: none; } }
 
-@media (max-width: 640px) {
+@media (max-width: 699px) {
   body {
-    background: yellow; }
-  .header {
-    grid-template-areas: "derecha"; }
-    .header .menu {
-      display: none; }
-    .header .acciones {
-      display: none; }
-  .header > .derecha {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1; } }
+    background: skyblue; }
+  .header .menu {
+    display: none; }
+  .header .acciones {
+    display: none; } }
 
 .toda-la-ventana-superior .slider {
   width: 100vw;
@@ -335,21 +334,17 @@
       list-style: none; }
       .toda-la-ventana-superior .slider ul li .banner-principal {
         width: 100vw;
-        height: 240px;
         background-repeat: no-repeat;
-        background-size: 100vw 240px;
         background-size: cover;
         -webkit-animation: fondo 5s infinite alternate;
         animation: fondo 5s infinite alternate;
         display: -ms-grid;
         display: grid;
-        grid-auto-columns: 1fr 2fr;
-        grid-template-areas: "img texto"; }
+        padding: auto; }
         .toda-la-ventana-superior .slider ul li .banner-principal .img {
           grid-area: img;
           width: 210px;
           height: 210px;
-          margin: auto;
           background-size: cover; }
           .toda-la-ventana-superior .slider ul li .banner-principal .img .icono {
             display: none;
@@ -365,12 +360,9 @@
           color: #F4F4F4;
           text-transform: uppercase; }
           .toda-la-ventana-superior .slider ul li .banner-principal .texto h1 {
-            font-family: "Work Sans", sans-serif;
-            font-size: 40px; }
+            font-family: "Work Sans", sans-serif; }
           .toda-la-ventana-superior .slider ul li .banner-principal .texto h2 {
             font-family: "Work Sans", sans-serif;
-            padding-bottom: 20px;
-            font-size: 25px;
             -webkit-transition: all .3s;
             -o-transition: all .3s;
             transition: all .3s; }
@@ -378,10 +370,7 @@
             background: transparent;
             color: #F4F4F4;
             text-decoration: none;
-            font-family: "Barlow", sans-serif;
-            font-size: 15px;
-            border: 3px solid;
-            padding: 8px 15px; }
+            font-family: "Barlow", sans-serif; }
             .toda-la-ventana-superior .slider ul li .banner-principal .texto a:hover {
               color: #EF241C; }
 
@@ -431,22 +420,6 @@
   100% {
     margin-left: -300vw; } }
 
-@-webkit-keyframes fondo {
-  from {
-    background-position: left center;
-    background-size: 1550px; }
-  to {
-    background-position: right center;
-    background-size: 1900px; } }
-
-@keyframes fondo {
-  from {
-    background-position: left center;
-    background-size: 1550px; }
-  to {
-    background-position: right center;
-    background-size: 1900px; } }
-
 .bp-1 {
   background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_9e6719a7cdff9c71_releases_ogimage.jpeg); }
   .bp-1 .img {
@@ -466,6 +439,74 @@
   background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_0ae3ebb9d213f27a_releases_ogimage.jpeg); }
   .bp-4 .img {
     background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/10/thumb_545fb8a67ea75117_releases_ogimage.jpeg); }
+
+@media (max-width: 1600px) and (min-width: 700px) {
+  .banner-principal {
+    height: 240px;
+    grid-auto-columns: 1fr 2fr;
+    grid-template-areas: "img texto";
+    background-size: 100vw 240px; }
+    .banner-principal .img {
+      margin: auto; }
+    .banner-principal .texto h1 {
+      font-size: 40px; }
+    .banner-principal .texto h2 {
+      font-size: 25px;
+      padding-bottom: 20px; }
+    .banner-principal .texto a {
+      font-size: 18px;
+      padding: 6px 15px;
+      border: 3px solid; }
+  @-webkit-keyframes fondo {
+    from {
+      background-position: left center;
+      background-size: 1550px; }
+    to {
+      background-position: right center;
+      background-size: 1900px; } }
+  @keyframes fondo {
+    from {
+      background-position: left center;
+      background-size: 1550px; }
+    to {
+      background-position: right center;
+      background-size: 1900px; } } }
+
+@media (max-width: 699px) {
+  .banner-principal {
+    height: 400px;
+    width: 100%;
+    height: 400px;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-areas: "img" "texto";
+    background-size: 100vw 400px;
+    text-align: center; }
+    .banner-principal .img {
+      margin: auto;
+      margin-top: 30px; }
+    .banner-principal .texto h1 {
+      font-size: 30px; }
+    .banner-principal .texto h2 {
+      font-size: 15px;
+      padding-bottom: 10px; }
+    .banner-principal .texto a {
+      font-size: 12px;
+      padding: 4px 15px;
+      border: 2px solid; }
+  @-webkit-keyframes fondo {
+    from {
+      background-position: left center;
+      background-size: 2600px; }
+    to {
+      background-position: right center;
+      background-size: 3100px; } }
+  @keyframes fondo {
+    from {
+      background-position: left center;
+      background-size: 2600px; }
+    to {
+      background-position: right center;
+      background-size: 3100px; } } }
 
 .todo-el-body {
   width: 100%; }
