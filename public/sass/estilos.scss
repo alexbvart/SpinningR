@@ -5,6 +5,7 @@ $cl-letra:$cl-blanco;
 // -----------------------------------
 // ---------PARTES DEL CODIGO---------
 @import "partes/header";
+@import "partes/centro_g";
 // @import "partes/banner";
 @import "partes/banner2";
 @import "partes/gallery";
@@ -30,11 +31,14 @@ $cl-letra:$cl-blanco;
     }
     .toda-la-ventana-inferior {
         // grid-area: inferior;
-        width: 100%;
-        max-width: 800px;
-        margin: 22px 33px;
+        width: 88%;
+        // max-width: 800px;
+        height: 1000px;
+        margin: 30px auto;
+        background: #f2f2f2;
+        // ---------------------------
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "s-lar s-lar tarj tarj";
+        grid-template-areas: "target-News" "Out-Now" "Out-Soon" "Events";
+        grid-gap: 20px;
     }
 }

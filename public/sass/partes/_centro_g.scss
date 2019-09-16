@@ -1,1 +1,218 @@
-.toda-la-ventana-inferior {}
+@import "../recursos/fuentes&color";
+.titulo-ca {
+    background: white;
+    margin-bottom: 5px;
+    font-family: $lt-gruesa;
+    text-transform: uppercase;
+    font-size: 18px;
+    // -------------------------------
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // -------------------------------
+    span,
+    p {
+        padding: 10px 10px;
+    }
+    // -------------------------------
+    span {
+        padding-left: 70px;
+        clip-path: polygon(33% 0, 100% 0%, 100% 99%, 0 97%);
+        &:hover {
+            background: $cl-rojo;
+            color: white;
+            // padding: 10px 10px;
+        }
+        &:hover .titulo-ca {
+            background: $cl-rojo;
+        }
+    }
+}
+
+.pagV {
+    padding: 20px 5px;
+}
+
+// --------------------------------------------
+// --------------------------------------------
+.toda-la-ventana-inferior {
+    .target-News {
+        grid-area: target-News;
+        // ---------------------------
+        display: grid;
+        grid-gap: 10px;
+        // -----------------------
+        .titulo-N {
+            grid-area: News-title;
+        }
+        .large {
+            grid-area: larga;
+            background: red;
+            width: 100%;
+            // background-image: url(https://spinninrecords.com/media/cache/item_thumbnail/uploads/media/news/0001/13/f061711214e82eead839d989360f109c32690f4f.jpeg);
+            background-image: url(../img/News/radio.jpeg);
+        }
+        .card1 {
+            grid-area: cuadro1;
+            // background: rgba(yellow, .5);
+            background: white;
+            width: 220px;
+            // -------------------
+            .img {
+                // background-image: url(https://spinninrecords.com/media/cache/item_thumbnail/uploads/media/news/0001/13/7e556c289d4111671a96168261371177d428714c.jpeg);
+                background-image: url(../img/News/Jay.jpeg);
+            }
+        }
+        .card2 {
+            grid-area: cuadro2;
+            // background: rgba( green, .3);
+            background: white;
+            width: 220px;
+            .img {
+                // background-image: url(https://spinninrecords.com/media/cache/item_thumbnail/uploads/media/news/0001/13/704c00bf17cd40b99f50739616278793d1092cd9.jpeg);
+                background-image: url(../img/News/game-room.jpeg);
+            }
+        }
+        // ---------------------------
+        .cardG {
+            padding: 0 auto;
+            width: 220px;
+            height: 320px;
+            .texto {
+                // display: flex;
+                // align-items: center;
+                text-align: center;
+                span {
+                    width: 100%;
+                    font-style: italic;
+                    font-family: $lt-parrafo;
+                }
+                p {
+                    width: 100%;
+                    // display: block;
+                    font-family: $lt-parrafo;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+            .boton {
+                margin-top: 15px;
+                text-align: center;
+                a {
+                    background: transparent;
+                    color: $cl-bg-header;
+                    text-decoration: none;
+                    font-family: $lt-titulo;
+                    //    -----
+                    font-size: 18px;
+                    padding: 6px 15px;
+                    border: 2px solid;
+                    .icono {
+                        display: none;
+                    }
+                    &:hover {
+                        color: $cl-rojo;
+                    }
+                    &:hover .icono {
+                        display: inline-block;
+                        transition: all 5s;
+                    }
+                }
+            }
+        }
+        // ---------------------------
+    }
+    .Out-Now {
+        grid-area: Out-Now;
+        // ---------------------------
+        display: grid;
+        // -----------------------
+    }
+    .Out-Soon {
+        grid-area: Out-Soon;
+        // ---------------------------
+        display: grid;
+        // -----------------------
+    }
+    .Events {
+        grid-area: Events;
+        // ---------------------------
+        display: grid;
+        // -----------------------
+    }
+}
+
+// --------------------------------------------
+// --------------------------------------------
+// ------------------menor a 970 ---
+@media(min-width: 1004px) {
+    .target-News {
+        grid-template-columns: 1fr 1fr 1fr 220px 220px;
+        grid-template-areas: "News-title News-title News-title News-title News-title" "larga larga larga cuadro1 cuadro2";
+        // ---------------------------
+        .img-size {
+            width: 100%;
+            height: 130px;
+            background-size: 220px 130px;
+            background-size: cover;
+        }
+        .img-G-size {
+            width: 100%;
+            height: 320px;
+            background-size: 3fr 320px;
+            background-size: cover;
+        }
+    }
+    .Out-Now {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        // ---------------------------
+    }
+    .Out-Soon {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        // ---------------------------
+    }
+    .Events {
+        grid-template-areas: "event event event ";
+        // ---------------------------
+    }
+}
+
+// ------------------menor a 970 ---
+@media(max-width:1003px) {
+    @media(min-width: 700px) {
+        .target-News {
+            grid-template-areas: "News-title" "larga" "cuadro1" "cuadro2";
+            // ---------------------------
+        }
+        .Out-Now {
+            grid-template-columns: 1fr 1fr 1fr;
+            // ---------------------------
+        }
+        .Out-Soon {
+            grid-template-columns: 1fr 1fr 1fr;
+            // ---------------------------
+        }
+        .Events {
+            grid-template-areas: "event" "event" "event ";
+            // ---------------------------
+        }
+    }
+}
+
+@media(max-width:699px) {
+    .target-News {
+        grid-template-areas: "News-title" "larga" "cuadro1" "cuadro2" // ---------------------------
+    }
+    .Out-Now {
+        grid-template-columns: 1fr 1fr;
+        // ---------------------------
+    }
+    .Out-Soon {
+        grid-template-columns: 1fr 1fr;
+        // ---------------------------
+    }
+    .Events {
+        grid-template-areas: "event" "event" "event ";
+        // ---------------------------
+    }
+}

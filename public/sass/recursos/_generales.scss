@@ -10,7 +10,13 @@
     // justify-content: center;
 }
 
-.margen {
+.display-center-justi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+display-center .margen {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
