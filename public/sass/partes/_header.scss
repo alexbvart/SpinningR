@@ -1,0 +1,140 @@
+        @import "../recursos/importes";
+        .toda-la-ventana-superior {
+            .header {
+                width: 100vw;
+                height: 50px;
+                grid-area: header-sup;
+                background: $cl-bg-header;
+                // -------------------
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-areas: "derecha derecha menu menu menu menu acciones acciones";
+                grid-gap: 10px;
+                .derecha {
+                    padding-left: 10px;
+                    grid-area: derecha;
+                    a {
+                        text-decoration: none;
+                        color: $cl-letra;
+                    }
+                }
+                .menu {
+                    grid-area: menu;
+                    // ------------
+                    // display: grid;
+                    grid-template-columns: repeat(8, auto);
+                    grid-gap: 10px;
+                    // grid-template-areas: "m-u m-p m-n m-t m-e m-c m-s m-a";
+                    // .m-u {
+                    //     grid-area: m-u
+                    // }
+                    // .m-p {
+                    //     grid-area: m-p
+                    // }
+                    // .m-n {
+                    //     grid-area: m-n
+                    // }
+                    // .m-t {
+                    //     grid-area: m-t
+                    // }
+                    // .m-e {
+                    //     grid-area: m-e
+                    // }
+                    // .m-c {
+                    //     grid-area: m-c
+                    // }
+                    // .m-s {
+                    //     grid-area: m-s
+                    // }
+                    // .m-a {
+                    //     grid-area: m-a
+                    // }
+                    a:hover {
+                        color: $cl-rojo;
+                    }
+                    a {
+                        position: relative;
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 5px;
+                            background: $cl-rojo;
+                            position: absolute;
+                            left: 50%;
+                            bottom: -17px;
+                            transition: all .2s;
+                            align-items: center;
+                        }
+                        &:hover:before {
+                            width: 90%;
+                            left: 0;
+                        }
+                    }
+                }
+                .acciones {
+                    grid-area: menu;
+                    // display: grid;
+                    grid-template-columns: repeat(7, auto);
+                    grid-gap: 10px;
+                    // -----------------
+                    grid-area: acciones;
+                    // margin-right: -11x;
+                }
+            }
+        }
+        
+        // ------------------menor a 970 ---
+        @media(max-width:1600px) {
+            @media(min-width: 1004px) {
+                body {
+                    background: green;
+                }
+                .header {
+                    .menu {
+                        display: grid;
+                    }
+                    .acciones {
+                        display: grid;
+                    }
+                }
+            }
+        }
+        
+        // ------------------menor a 970 ---
+        @media(max-width:1003px) {
+            @media(min-width: 700px) {
+                body {
+                    background: red;
+                }
+                .header {
+                    .menu {
+                        display: none;
+                    }
+                    .acciones {
+                        display: grid;
+                        .borrar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media(max-width:699px) {
+            body {
+                background: skyblue;
+            }
+            .header {
+                .derecha {
+                    margin-left: auto;
+                }
+                // grid-template-areas: "derecha . . . . . . .";
+                .menu {
+                    display: none;
+                }
+                .acciones {
+                    display: none;
+                }
+            }
+        }

@@ -1,0 +1,211 @@
+@import "../recursos/fuentes&color";
+.display-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+$time-fondo: 5s;
+// -----------------------------------------
+// -----------------------------------------
+.toda-la-ventana-superior {
+    .contenedor-sl {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        // ---------------------------------------
+        .slider-contenedor {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .banner-principal {
+                width: 100%;
+                // height: 240px;
+                // ---------------------------------
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                // ---------------------------------
+                padding: 0;
+                // ---------------------------------------
+                background-repeat: no-repeat;
+                // background-size: 100vw 240px;
+                background-size: cover;
+                animation: fondo $time-fondo infinite alternate;
+                // --------------------B-------------
+                display: grid;
+                // grid-auto-columns: 1fr 2fr;
+                // grid-template-areas: "img texto";
+                // margin: auto;
+                padding: auto;
+                .img {
+                    grid-area: img;
+                    width: 210px;
+                    height: 210px;
+                    background-size: cover;
+                    .icono {
+                        display: none;
+                        color: $cl-bg-lite;
+                        font-size: 50px;
+                        transition: all .3s;
+                    }
+                    &:hover .icono {
+                        display: block;
+                    }
+                }
+                .texto {
+                    grid-area: texto;
+                    color: $cl-bg-lite;
+                    text-transform: uppercase; // padding: 50px 0;
+                    h1 {
+                        font-family: $lt-gruesa;
+                        // font-size: 40px;
+                    }
+                    h2 {
+                        font-family: $lt-gruesa;
+                        // font-size: 25px;
+                        transition: all .3s;
+                    }
+                    a {
+                        background: transparent;
+                        color: $cl-bg-lite;
+                        text-decoration: none;
+                        font-family: $lt-titulo;
+                        // font-size: 15px;
+                        // border: 3px solid;
+                        &:hover {
+                            color: $cl-rojo;
+                        }
+                    }
+                }
+            }
+            .bp-1 {
+                // background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_9e6719a7cdff9c71_releases_ogimage.jpeg);
+                background-image: url(../img/slider/G-ojo.jpeg);
+                // background: skyblue;
+                .img {
+                    // background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_1f536134ce181fee_releases_ogimage.jpeg);
+                    background-image: url(../img/slider/b-ojo.jpeg);
+                }
+            }
+            .bp-2 {
+                // background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_a4a9208196df9ade_releases_ogimage.jpeg);
+                background-image: url(../img/slider/G-monster.jpeg);
+                .img {
+                    // background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_0360452e95af0ecc_releases_ogimage.jpeg);
+                    background-image: url(../img/slider/b-monster.jpeg);
+                }
+            }
+            .bp-3 {
+                // background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_06e79c808c162662_releases_ogimage.jpeg);
+                background-image: url(../img/slider/G-lila.jpeg);
+                .img {
+                    // background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_001856746cdfa307_releases_ogimage.jpeg);
+                    background-image: url(../img/slider/b-lila.jpeg);
+                }
+            }
+            .bp-4 {
+                // background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_0ae3ebb9d213f27a_releases_ogimage.jpeg);
+                background-image: url(../img/slider/G-malone.jpeg);
+                .img {
+                    // background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/10/thumb_545fb8a67ea75117_releases_ogimage.jpeg);
+                    background-image: url(../img/slider/b-malone.jpeg);
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1600px) {
+    @media(min-width: 700px) {
+        .slider-contenedor {
+            height: 240px;
+        }
+        .banner-principal {
+            height: 240px;
+            // ----------------------------
+            grid-auto-columns: 1fr 2fr;
+            grid-template-areas: "img texto";
+            // ------------------------------------
+            background-size: 100vw 240px;
+            // ---------------------------------
+            .img {
+                margin: auto;
+            }
+            .texto {
+                h1 {
+                    font-size: 40px;
+                }
+                h2 {
+                    font-size: 25px;
+                    padding-bottom: 20px;
+                }
+                a {
+                    font-size: 18px;
+                    padding: 6px 15px;
+                    border: 3px solid;
+                }
+            }
+        }
+        @keyframes fondo {
+            from {
+                background-position: left center;
+                background-size: 1550px;
+            }
+            to {
+                background-position: right center;
+                background-size: 1900px;
+            }
+        }
+    }
+}
+
+@media(max-width:699px) {
+    .slider-contenedor {
+        width: 100%;
+        height: 200;
+    }
+    .banner-principal {
+        height: auto;
+        min-height: 400px;
+        // ----------------------------
+        // background: red;
+        width: 100%;
+        height: 400px;
+        grid-auto-rows: 1fr 1fr;
+        grid-template-areas: "img" "texto";
+        // ------------------------------------
+        background-size: 100vw 400px;
+        // ---------------------------------
+        text-align: center;
+        // ---------------------------------
+        .img {
+            margin: auto;
+            margin-top: 30px;
+        }
+        .texto {
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 15px;
+                padding-bottom: 10px;
+            }
+            a {
+                font-size: 12px;
+                padding: 4px 15px;
+                border: 2px solid;
+            }
+        }
+    }
+    @keyframes fondo {
+        from {
+            background-position: left center;
+            background-size: 2600px;
+        }
+        to {
+            background-position: right center;
+            background-size: 4100px;
+        }
+    }
+}

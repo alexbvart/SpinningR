@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.display-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.margen {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto; }
+
+.img-circular {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px; }
+
+.img-cuadro-255 {
+  width: 255px;
+  height: 255px; }
+
+.img-rectangulo-1280 {
+  max-width: 50px;
+  width: 100vw;
+  margin-left: 50px;
+  background: red; }
+
+.lt-titulo {
+  font-family: "Barlow", sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+  text-decoration: none; }
+
+.lt-parrafo {
+  font-family: "News Cycle", sans-serif;
+  font-size: 17px;
+  font-weight: unset;
+  text-decoration: none; }
+
+.tex-deco-none {
+  text-decoration: none; }
+
+.bg-dark {
+  background: #1c1f21;
+  color: #F4F4F4;
+  text-decoration: none; }
+
+.si-20 {
+  font-size: 20px; }
+
+.si-18 {
+  font-size: 18px; }
+
+.si-17 {
+  font-size: 17px; }
+
+.si-15 {
+  font-size: 15px; }
+
+.si-11 {
+  font-size: 12px; }
+
+.bt-red-normal {
+  background: #EF241C;
+  line-height: 4.2;
+  padding: 0 5px; }
