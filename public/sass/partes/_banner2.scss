@@ -34,6 +34,10 @@ $time-fondo: 5s;
                 animation: fondo $time-fondo infinite alternate;
                 // --------------------B-------------
                 display: grid;
+                // ---------------------------------------
+                position: relative;
+                // ---------------------------------------
+                // ---------------------------------------
                 // grid-auto-columns: 1fr 2fr;
                 // grid-template-areas: "img texto";
                 // margin: auto;
@@ -48,8 +52,19 @@ $time-fondo: 5s;
                         color: $cl-bg-lite;
                         font-size: 50px;
                         transition: all .3s;
+                        // &:hover {
+                        &:after {
+                            background-size: cover;
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background-image: linear-gradient(transparent 59%, black);
+                        }
+                        // }
                     }
                     &:hover .icono {
+                        // background: linear-gradient(transparent,black);
                         display: block;
                     }
                 }
@@ -81,13 +96,18 @@ $time-fondo: 5s;
                 }
             }
             .bp-1 {
+                // background: linear-gradient(black, transparent);
                 // background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_9e6719a7cdff9c71_releases_ogimage.jpeg);
-                background-image: url(../img/slider/G-ojo.jpeg);
+                background: url(../img/slider/G-ojo.jpeg);
                 // background: skyblue;
                 .img {
                     // background-image: url(https://spinninrecords.com/media/cache/release_thumbnail/uploads/media/releases/0001/13/thumb_1f536134ce181fee_releases_ogimage.jpeg);
                     background-image: url(../img/slider/b-ojo.jpeg);
                 }
+                // &:hover .img {
+                //     background-image: url(../img/slider/G-ojo.jpeg) //;
+                //     linear-gradient(transparent, black 15%);
+                // }
             }
             .bp-2 {
                 // background-image: url(https://spinninrecords.com/media/cache/header_wide/uploads/media/releases/0001/13/thumb_a4a9208196df9ade_releases_ogimage.jpeg);

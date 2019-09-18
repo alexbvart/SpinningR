@@ -4,6 +4,49 @@
     padding: 0;
 }
 
+.agrandar-dentro {
+    overflow: hidden;
+    // background: cover;
+    transition: all .2s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.agrandar-fuera {
+    // overflow: hidden;
+    transition: all .2s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// -----------------------------------
+// -----------------------------------
+.display-center-ver {
+    display: flex;
+    align-items: center; //vertical
+}
+
+.display-center-hor {
+    display: flex;
+    justify-content: center; // horizontal
+}
+
+.display-center-all {
+    display: flex;
+    align-items: center; //vertical
+    justify-content: center; // horizontal
+}
+
+.display-center-separado-ver {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; //ambos para un alineamiento verticar 
+}
+
+// -----------------------------------
+// -----------------------------------
 .display-center {
     display: flex;
     align-items: center;
